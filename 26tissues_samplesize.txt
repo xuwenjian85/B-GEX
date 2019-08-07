@@ -1,0 +1,28 @@
+tissue	samplesize	bestalpha	besttopset
+Muscle - Skeletal	341	0.04	7
+Skin - Sun Exposed (Lower leg)	289	0.04	7
+Artery - Tibial	283	0.04	7
+Adipose - Subcutaneous	278	0.04	7
+Lung	271	0.04	7
+Nerve - Tibial	257	0.04	7
+Thyroid	256	0.04	7
+Esophagus - Mucosa	247	0.06	6
+Esophagus - Muscularis	224	0.04	7
+Skin - Not Sun Exposed (Suprapubic)	203	0.06	6
+Artery - Aorta	202	0.06	6
+Adipose - Visceral (Omentum)	197	0.06	6
+Heart - Left Ventricle	196	0.06	6
+Breast - Mammary Tissue	173	0.06	6
+Colon - Transverse	173	0.06	6
+Heart - Atrial Appendage	171	0.08	5
+Stomach	165	0.06	6
+Testis	163	0.06	6
+Pancreas	156	0.06	6
+Esophagus - Gastroesophageal Junction	139	0.08	5
+Colon - Sigmoid	135	0.08	5
+Adrenal Gland	121	0.06	6
+Artery - Coronary	116	0.08	5
+Liver	105	0.1	4
+Pituitary	104	0.14	2
+Brain - Cerebellum	101	0.1	4
+
