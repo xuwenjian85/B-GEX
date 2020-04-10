@@ -1,5 +1,6 @@
 # B-GEX
 Blood-based multi-tissue gene expression inference with Bayesian regression
+v2
 ## This is a quick demo
 As a demo, we prepared a small expression TPM dataset of 2 target tissues and their associated blood samples. Each target tissue have 4 target genes. `input.zip` is demo data. The `demo.py` will extract blood features, build linear regression models and evaluate inference model performances.
 ```shell
