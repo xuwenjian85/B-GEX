@@ -1,21 +1,15 @@
 # B-GEX
-Blood-based multi-tissue gene expression inference with Bayesian regression.
+Blood-based multi-tissue gene expression inference with Bayesian regression.  The method is published in the XXXXXXX. 
 
-The inference models are tissue-specific, so we built an independent dataset for each tissue. 
+The inference models are tissue-specific, so we built an independent inference models for each tissue. 
 
-## This is a quick demo(to do)
-As a demo, we prepared a small expression TPM dataset of 2 target tissues and their associated blood samples. Each target tissue have 4 target genes. `input.zip` is demo data. The `demo.py` will extract blood features, build linear regression models and evaluate inference model performances.
-```shell
-unzip demo/input.zip -d demo/
-python demo.py
-```
 ## Preprocessing
 Download data files from [GTEx Portal](https://gtexportal.org/home) and gencode:
 * GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_tpm.gct
 * GTEx_v7_Annotations_SampleAttributesDS.txt
 * gencode.v30lift37.annotation.gtf
 
-Collect pseudogenes in a file. Then remove pseudogene from gene_tpm
+Collect pseudogenes into a file. Then remove pseudogene from gene_tpm
 ```shell
 awk -F "\t" '$3 == "gene" && $9~/pseudogene/ {print}' gencode.v30lift37.annotation.gtf | cut -f9 | cut -d" " -f2,4 | sed 's/[";]//g' | sed 's/[\. ]/\t/g' | cut -f1,3 > gencode.v30lift37.pseudogene.txt
 
@@ -23,7 +17,7 @@ cut -f1 gencode.v30lift37.pseudogene.txt | grep -v -f - GTEx_Analysis_2016-01-15
 ```
 ## Main script
 
-The rest of main work can be done in B-GEX_v2.ipynb on a linux x86_64 server (2 x Intel(R) Xeon(R) Gold 6144 CPU 3.50GHz, 128 Gb RAM). 
+The rest of steps can be done with B-GEX_v2.ipynb on a linux x86_64 server. We have tested on 2 x Intel(R) Xeon(R) Gold 6144 CPU 3.50GHz, 128 Gb RAM.  
 
 ## How it works?
 
@@ -41,6 +35,8 @@ Train and evaluate baseline LSR model with these feature sets. We found 10 featu
 The optimal feature set used to make a linear regression model for each gene in each tissue.
 
 The models’ performance is further analyzed at gene level with MAE, r(Pearsons correlation coefficient), RMSE, etc.
+
+### Interpretation of predict result
 
 For convenience, we separate genes into predictable and non-predictable genes according to empirical quality check results.          
 
