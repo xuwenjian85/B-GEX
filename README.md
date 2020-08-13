@@ -1,5 +1,5 @@
 # B-GEX
-Blood-based multi-tissue gene expression inference with Bayesian regression.  The method is published in the XXXXXXX. 
+Blood-based multi-tissue gene expression inference with Bayesian regression. The method is published in the *Bioinformatics* 2020. (https://doi.org/10.1093/bioinformatics/btaa239). 
 
 The inference models are tissue-specific, so we built an independent inference models for each tissue. 
 
